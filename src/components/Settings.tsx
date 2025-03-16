@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { financeStorage } from "@/lib/utils";
@@ -351,7 +351,7 @@ const Settings = () => {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Color
                   </label>
-                  <div className="flex items-center">
+                  <div className="grid grid-cols-[1fr_2fr] overflow-hidden sm:flex sm:flex-row items-center">
                     <input
                       type="color"
                       value={goal.color}
