@@ -42,6 +42,17 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Finance colors */
+  --color-finance-blue: var(--finance-blue);
+  --color-finance-light-blue: var(--finance-light-blue);
+  --color-finance-red: var(--finance-red);
+  --color-finance-light-red: var(--finance-light-red);
+  --color-finance-yellow: var(--finance-yellow);
+  --color-finance-light-yellow: var(--finance-light-yellow);
+  --color-finance-green: var(--finance-green);
+  --color-finance-light-green: var(--finance-light-green);
+  --color-finance-purple: var(--finance-purple);
 }
 
 :root {
@@ -77,6 +88,17 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  /* Finance colors */
+  --finance-blue: #4270ed;
+  --finance-light-blue: #f5f7ff;
+  --finance-red: #ff5c8e;
+  --finance-light-red: #fff1f6;
+  --finance-yellow: #ffb74d;
+  --finance-light-yellow: #fff8eb;
+  --finance-green: #47b881;
+  --finance-light-green: #e6f7ef;
+  --finance-purple: #8e56eb;
 }
 
 .dark {
@@ -111,6 +133,8 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  /* Finance colors remain the same in dark mode */
 }
 
 @layer base {
