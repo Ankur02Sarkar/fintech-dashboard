@@ -351,7 +351,7 @@ const Settings = () => {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Color
                   </label>
-                  <div className="grid grid-cols-[1fr_2fr] overflow-hidden sm:flex sm:flex-row items-center">
+                  <div className="grid grid-cols-[1fr_2fr] sm:flex sm:flex-row items-center">
                     <input
                       type="color"
                       value={goal.color}
@@ -378,7 +378,7 @@ const Settings = () => {
                           e.target.value
                         )
                       }
-                      className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700"
+                      className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700"
                     />
                   </div>
                 </div>
