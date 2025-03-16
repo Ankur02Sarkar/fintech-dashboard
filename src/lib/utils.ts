@@ -10,8 +10,8 @@ export function cn(...inputs: ClassValue[]) {
 // Initial mock data
 const mockFinanceData: FinanceData = {
   user: {
-    name: "Ankur Sarkar",
-    avatar: "https://ankur02sarkar.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile.ade7d646.png&w=1920&q=75",
+    name: "User",
+    avatar: "https://cdn-icons-png.flaticon.com/512/1144/1144760.png",
   },
   balance: {
     amount: 4509,
