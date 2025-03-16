@@ -73,12 +73,12 @@ const Dashboard = () => {
               important for you to catch up.
             </p>
           </div>
-          <div className="flex items-center mt-4 md:mt-0">
-            <div className="relative mr-4">
+          <div className="flex w-full items-center mt-4 md:mt-0">
+            <div className="relative mr-4 w-full">
               <input
                 type="text"
                 placeholder="Search..."
-                className="pl-10 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="pl-10 pr-4 py-2 rounded-lg border border-gray-200 dark:border-gray-700 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
               />
               <svg
                 className="absolute left-3 top-2.5 h-5 w-5 text-gray-400"
