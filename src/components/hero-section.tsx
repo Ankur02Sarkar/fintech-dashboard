@@ -68,8 +68,8 @@ export default function HeroSection() {
               className="absolute inset-0 -z-20"
             >
               <Image
-                src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605538/night-background_ni3vqb.jpg"
-                alt="background"
+                src="https://s3-figma-hubfile-images-production.figma.com/hub/file/carousel/img/8edaf47ec006e8933f5ea57a25392f7dfb1bcf52"
+                alt="finance background"
                 className="absolute inset-x-0 top-56 -z-20 hidden lg:top-32 dark:block"
                 width="3276"
                 height="4095"
@@ -80,11 +80,11 @@ export default function HeroSection() {
               <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
                 <AnimatedGroup variants={transitionVariants}>
                   <Link
-                    href="#link"
+                    href="/dashboard"
                     className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
                   >
                     <span className="text-foreground text-sm">
-                      Introducing Support for AI Models
+                      New Real-Time Market Analytics
                     </span>
                     <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
 
@@ -107,7 +107,7 @@ export default function HeroSection() {
                   as="h1"
                   className="mt-8 text-balance text-6xl md:text-7xl lg:mt-16 xl:text-[5.25rem]"
                 >
-                  Modern Solutions for Customer Engagement
+                  Advanced Financial Analytics Dashboard
                 </TextEffect>
                 <TextEffect
                   per="line"
@@ -117,8 +117,9 @@ export default function HeroSection() {
                   as="p"
                   className="mx-auto mt-8 max-w-2xl text-balance text-lg"
                 >
-                  Highly customizable components for building modern websites
-                  and applications that look and feel the way you mean it.
+                  Powerful financial tools with real-time market data, portfolio
+                  tracking, and AI-powered investment insights to optimize your
+                  financial strategy.
                 </TextEffect>
 
                 <AnimatedGroup
@@ -144,8 +145,8 @@ export default function HeroSection() {
                       size="lg"
                       className="rounded-xl px-5 text-base"
                     >
-                      <Link href="#link">
-                        <span className="text-nowrap">Start Building</span>
+                      <Link href="/dashboard">
+                        <span className="text-nowrap">View Dashboard</span>
                       </Link>
                     </Button>
                   </div>
@@ -156,8 +157,8 @@ export default function HeroSection() {
                     variant="ghost"
                     className="h-10.5 rounded-xl px-5"
                   >
-                    <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
+                    <Link href="/settings">
+                      <span className="text-nowrap">Investment Reports</span>
                     </Link>
                   </Button>
                 </AnimatedGroup>
