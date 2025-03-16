@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { HeroHeader } from "@/components/hero5-header";
+import Sidebar from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "Main Layout",
@@ -13,10 +13,8 @@ export default function MainLayout({
 }>) {
   return (
     <div className="min-h-screen flex flex-col">
-      <HeroHeader />
-      <main className="flex-1 container mx-auto py-8 px-4">
-        {children}
-      </main>
+      <Sidebar />
+      <main className="flex-1 container mx-auto py-8 px-4">{children}</main>
     </div>
   );
 }
