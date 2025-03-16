@@ -48,7 +48,7 @@ const Sidebar = ({ className }: SidebarProps) => {
       animate="visible"
       variants={sidebarVariants}
       className={cn(
-        "w-[80px] bg-white flex flex-col items-center py-8 border-r border-gray-100 fixed top-0 left-0 z-10",
+        "w-[80px] bg-white flex flex-col items-center py-8 border-r border-gray-100 fixed top-0 left-0 z-30",
         className
       )}
     >
