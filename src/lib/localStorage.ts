@@ -32,7 +32,7 @@ export interface DashboardData {
 
 // Default data if nothing is in localStorage
 const defaultData: DashboardData = {
-  userName: "Shahin Alam",
+  userName: "Ankur Sarkar",
   balance: 4509,
   sales: 1509,
   revenue: 2500.09,

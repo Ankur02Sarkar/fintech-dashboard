@@ -288,18 +288,18 @@ const Dashboard = () => {
           <motion.div variants={itemAnimation}>
             <Card
               title="Activity"
-              titleAction={
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              }
+            //   titleAction={
+            //     <button className="text-gray-400 hover:text-gray-600">
+            //       <svg
+            //         xmlns="http://www.w3.org/2000/svg"
+            //         className="h-5 w-5"
+            //         viewBox="0 0 20 20"
+            //         fill="currentColor"
+            //       >
+            //         <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            //       </svg>
+            //     </button>
+            //   }
               className="col-span-1"
             >
               <div className="flex justify-center">
@@ -365,7 +365,7 @@ const Dashboard = () => {
                   <span className="text-xs text-gray-500 dark:text-gray-400">
                     {data.sale.period}
                   </span>
-                  <button className="text-gray-400 hover:text-gray-600">
+                  {/* <button className="text-gray-400 hover:text-gray-600">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       className="h-5 w-5"
@@ -374,7 +374,7 @@ const Dashboard = () => {
                     >
                       <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
                     </svg>
-                  </button>
+                  </button> */}
                 </div>
               }
             >
@@ -433,18 +433,18 @@ const Dashboard = () => {
           <motion.div variants={itemAnimation}>
             <Card
               title="Payments"
-              titleAction={
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              }
+            //   titleAction={
+            //     <button className="text-gray-400 hover:text-gray-600">
+            //       <svg
+            //         xmlns="http://www.w3.org/2000/svg"
+            //         className="h-5 w-5"
+            //         viewBox="0 0 20 20"
+            //         fill="currentColor"
+            //       >
+            //         <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            //       </svg>
+            //     </button>
+            //   }
             >
               <div className="flex justify-center mb-6">
                 <div className="w-40 h-40 relative">
@@ -475,9 +475,6 @@ const Dashboard = () => {
                     <span className="text-2xl font-bold">
                       {data.payments.percentage}%
                     </span>
-                    <span className="text-xs text-gray-500">
-                      Average Payment
-                    </span>
                   </div>
                 </div>
               </div>
@@ -505,18 +502,18 @@ const Dashboard = () => {
           <motion.div variants={itemAnimation}>
             <Card
               title="Goals"
-              titleAction={
-                <button className="text-gray-400 hover:text-gray-600">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
-                  </svg>
-                </button>
-              }
+            //   titleAction={
+            //     <button className="text-gray-400 hover:text-gray-600">
+            //       <svg
+            //         xmlns="http://www.w3.org/2000/svg"
+            //         className="h-5 w-5"
+            //         viewBox="0 0 20 20"
+            //         fill="currentColor"
+            //       >
+            //         <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z" />
+            //       </svg>
+            //     </button>
+            //   }
             >
               <div className="space-y-6">
                 {data.goals.items.map((goal, index) => (

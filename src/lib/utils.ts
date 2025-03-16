@@ -10,18 +10,18 @@ export function cn(...inputs: ClassValue[]) {
 // Initial mock data
 const mockFinanceData: FinanceData = {
   user: {
-    name: "Shahin Alam",
-    avatar: "/lovable-uploads/af893143-aff0-4dde-aaef-7ae06935a1ba.png",
+    name: "Ankur Sarkar",
+    avatar: "https://ankur02sarkar.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fprofile.ade7d646.png&w=1920&q=75",
   },
   balance: {
     amount: 4509,
-    currency: "$",
+    currency: "₹",
     chartData: [18, 35, 25, 45, 30, 55, 40],
     period: "7 days",
   },
   sells: {
     amount: 1509,
-    currency: "$",
+    currency: "₹",
     chartData: [
       { name: "Mon", value: 10 },
       { name: "Tue", value: 30 },
@@ -35,7 +35,7 @@ const mockFinanceData: FinanceData = {
   },
   revenue: {
     amount: 250.09,
-    currency: "$",
+    currency: "₹",
     chartData: [
       { name: "Mon", value: 15 },
       { name: "Tue", value: 25 },
@@ -135,7 +135,7 @@ export const financeStorage = {
 };
 
 // Format currency
-export const formatCurrency = (value: number, currency: string = "$"): string => {
+export const formatCurrency = (value: number, currency: string = "₹"): string => {
   return `${currency}${value.toLocaleString("en-US", {
     minimumFractionDigits: value % 1 === 0 ? 0 : 2,
     maximumFractionDigits: 2,

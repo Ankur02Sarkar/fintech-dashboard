@@ -86,7 +86,7 @@ const Settings = () => {
         </div>
 
         {/* User Settings */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6 cursor-pointer">
           <h2 className="text-lg font-medium mb-4">User Information</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -119,7 +119,7 @@ const Settings = () => {
         </div>
 
         {/* Balance Settings */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6 cursor-pointer">
           <h2 className="text-lg font-medium mb-4">Balance</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -169,7 +169,7 @@ const Settings = () => {
         </div>
 
         {/* Sales Settings */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6 cursor-pointer">
           <h2 className="text-lg font-medium mb-4">Sales</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -206,7 +206,7 @@ const Settings = () => {
         </div>
 
         {/* Revenue Settings */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6 cursor-pointer">
           <h2 className="text-lg font-medium mb-4">Revenue</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
@@ -243,7 +243,7 @@ const Settings = () => {
         </div>
 
         {/* Payments Settings */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6 cursor-pointer">
           <h2 className="text-lg font-medium mb-4">Payments</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
@@ -279,7 +279,7 @@ const Settings = () => {
         </div>
 
         {/* Goals Settings */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6">
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm p-6 mb-6 cursor-pointer">
           <h2 className="text-lg font-medium mb-4">Goals</h2>
           {data.goals.items.map((goal, index) => (
             <div
@@ -364,7 +364,7 @@ const Settings = () => {
                           e.target.value
                         )
                       }
-                      className="w-10 h-10 rounded-md border border-gray-300 dark:border-gray-600 mr-2"
+                      className="w-10 h-10 rounded-md border border-gray-300 dark:border-gray-600 mr-2 cursor-pointer"
                     />
                     <input
                       type="text"
@@ -391,14 +391,14 @@ const Settings = () => {
         <div className="flex justify-between items-center mb-10">
           <button
             onClick={() => setShowResetConfirm(true)}
-            className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
           >
             Reset to Default
           </button>
           <motion.button
             onClick={handleSave}
             whileTap={{ scale: 0.95 }}
-            className="px-4 py-2 bg-blue-600 rounded-md shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-4 py-2 bg-blue-600 rounded-md shadow-sm text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
           >
             Save Changes
           </motion.button>
@@ -430,13 +430,13 @@ const Settings = () => {
             <div className="flex justify-center space-x-4">
               <button
                 onClick={() => setShowResetConfirm(false)}
-                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer"
               >
                 Cancel
               </button>
               <button
                 onClick={handleReset}
-                className="px-4 py-2 bg-red-600 rounded-md shadow-sm text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+                className="px-4 py-2 bg-red-600 rounded-md shadow-sm text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 cursor-pointer"
               >
                 Reset
               </button>
