@@ -4,6 +4,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Home, Settings } from "lucide-react";
+import { useEffect, useState } from "react";
 
 type SidebarProps = {
   className?: string;
@@ -16,11 +17,29 @@ const sidebarItems = [
 
 const Sidebar = ({ className }: SidebarProps) => {
   const pathname = usePathname();
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if the screen is mobile size
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768); // 768px is standard md breakpoint
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Add event listener for window resize
+    window.addEventListener("resize", checkMobile);
+
+    // Clean up event listener
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const sidebarVariants = {
-    hidden: { x: -40, opacity: 0 },
+    hidden: isMobile ? { y: 40, opacity: 0 } : { x: -40, opacity: 0 },
     visible: {
-      x: 0,
+      x: isMobile ? 0 : 0,
+      y: isMobile ? 0 : 0,
       opacity: 1,
       transition: {
         duration: 0.4,
@@ -30,10 +49,11 @@ const Sidebar = ({ className }: SidebarProps) => {
   };
 
   const childVariants = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, y: isMobile ? 10 : 10, x: isMobile ? 0 : 0 },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
+      x: 0,
       transition: {
         delay: 0.1 + i * 0.1,
         duration: 0.3,
@@ -48,11 +68,19 @@ const Sidebar = ({ className }: SidebarProps) => {
       animate="visible"
       variants={sidebarVariants}
       className={cn(
-        "w-[80px] h-full my-auto bg-white flex flex-col items-center py-8 border-r border-gray-100 fixed top-0 left-0 z-30",
+        isMobile
+          ? "w-full h-[80px] fixed bottom-0 left-0 z-30 bg-white border-t border-gray-100 flex justify-center"
+          : "w-[80px] h-full my-auto bg-white flex flex-col items-center py-8 border-r border-gray-100 fixed top-0 left-0 z-30",
         className
       )}
     >
-      <nav className="flex-1 flex flex-col items-center gap-6">
+      <nav
+        className={cn(
+          isMobile
+            ? "flex-row flex items-center justify-around w-full px-4"
+            : "flex-1 flex flex-col items-center gap-6"
+        )}
+      >
         {sidebarItems.map((item, index) => {
           const Icon = item.icon;
           const isActive = pathname.startsWith(item.path);
@@ -81,7 +109,14 @@ const Sidebar = ({ className }: SidebarProps) => {
                   >
                     <Icon size={22} />
                   </div>
-                  <span className="text-[10px] text-gray-500 opacity-0 transform translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+                  <span
+                    className={cn(
+                      "text-[10px] text-gray-500 transition-all duration-300",
+                      isMobile && isActive
+                        ? "opacity-100"
+                        : "opacity-0 transform translate-y-2 group-hover:opacity-100 group-hover:translate-y-0"
+                    )}
+                  >
                     {item.label}
                   </span>
                 </div>
